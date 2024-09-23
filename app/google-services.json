@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "825266327425",
+    "project_id": "projectilumina-6dca5",
+    "storage_bucket": "projectilumina-6dca5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825266327425:android:4d4c383a78d533caee6280",
+        "android_client_info": {
+          "package_name": "com.example.projectilumina"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcf4IVcXFOQYIJ1KBYKuOczxabSFA8SV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

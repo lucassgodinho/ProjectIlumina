@@ -27,6 +27,22 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // Exemplo de botão para navegar para a tela de login
+        val buttonLogin: Button = findViewById(R.id.button_login)
+        buttonLogin.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Exemplo de botão para navegar para a tela de cadastro
+        val buttonRegister: Button = findViewById(R.id.button_register)
+        buttonRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
 }
 
 @Composable
