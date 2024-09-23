@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+
+    <!-- Barra Superior -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/yellow"
+        android:id="@+id/barra_superior">
+
+        <ImageView
+            android:id="@+id/icon_menu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Ícone Menu"
+            android:src="@drawable/menu" />
+
+        <TextView
+            android:id="@+id/text_adicionar_denuncia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="Adicionar Denúncia"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/icon_notificacao"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/notificacao"
+            android:contentDescription="Ícone Notificação" />
+    </LinearLayout>
+
+    <!-- Conteúdo Principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Digite o bairro onde a manutenção é necessária:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_bairro"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_rectangle_yellow"
+            android:hint="Digite o bairro" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informe o tipo de manutenção que você está solicitando:"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/edt_tipo_manutencao"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_rectangle_yellow"
+            android:hint="Tipo de Manutenção" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Digite a data e hora da solicitação:"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/edt_data_hora"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_rectangle_yellow"
+            android:hint="Data e Hora" />
+
+        <Button
+            android:id="@+id/btn_adicionar_imagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_rectangle_yellow"
+            android:textColor="@color/white"
+            android:text="Adicionar Imagem" />
+        <Button
+            android:id="@+id/btn_concluir"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@color/cinza"
+            android:text="Concluir"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- Barra Inferior com ícones -->
+    <LinearLayout
+        android:id="@+id/barra_inferior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@color/yellow"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/icon_home"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/home"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/icon_denuncia"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/report"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+</LinearLayout>
