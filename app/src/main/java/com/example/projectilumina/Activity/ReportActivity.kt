@@ -13,7 +13,7 @@ class ReportActivity : AppCompatActivity() {
         binding = ActivityReportBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.iconHome.setOnClickListener {
+        binding.iconHome.setOnClickListener{
             finish()  // Fecha a ReportActivity e volta para a HomeActivity
         }
         binding.btnAdicionarDenuncia.setOnClickListener {
