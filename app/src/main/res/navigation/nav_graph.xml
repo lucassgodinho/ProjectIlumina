@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph.xml">
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homeActivity">
 
+    <activity
+        android:name="com.example.projectilumina.Activity.HomeActivity"
+        android:label="HomeActivity" />
+    <activity
+        android:id="@+id/sendReportActivity"
+        android:name="com.example.projectilumina.Activity.SendReportActivity"
+        android:label="SendReportActivity" />
+    <activity
+        android:id="@+id/reportActivity"
+        android:name="com.example.projectilumina.Activity.ReportActivity"
+        android:label="ReportActivity" />
 </navigation>

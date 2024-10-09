@@ -64,7 +64,7 @@
             <View
                 android:layout_width="16dp"
                 android:layout_height="16dp"
-                android:background="@android:color/holo_red_light" />
+                android:background="@android:color/holo_red_light"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -102,7 +102,7 @@
         android:orientation="vertical"
         android:padding="16dp"
         android:layout_below="@id/status_container"
-        android:layout_above="@+id/barra_inferior">
+        android:layout_above="@id/barra_inferior">
 
         <TextView
             android:layout_width="wrap_content"
@@ -111,124 +111,30 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <!-- Exemplo de um bloco de detalhes -->
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDenuncias"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_height="560dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
+
+        <Button
+            android:id="@+id/btnAdicionarDenuncia"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="70dp"
             android:background="@color/yellow"
-            android:padding="25dp"
-            android:layout_marginTop="8dp">
+            android:text="Adicionar Denúncia"
+            android:textColor="@android:color/white" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="start">
 
-                <TextView
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:text="Bairro: Centro"
-                    android:textColor="@android:color/white" />
-
-                <View
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="8dp"
-                    android:background="@android:color/holo_green_light" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" Finalizado"
-                    android:textColor="@android:color/white"
-                    android:layout_marginStart="4dp" />
-            </LinearLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tipo Manutenção: Troca de Fios"
-                android:textColor="@android:color/white" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Data e Hora: 01/01/2024 10:00"
-                android:textColor="@android:color/white" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Descrição: Fios soltos no meio da rua."
-                android:textColor="@android:color/white" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/yellow"
-            android:padding="25dp"
-            android:layout_marginTop="8dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="start">
-
-                <TextView
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:text="Bairro: Centro"
-                    android:textColor="@android:color/white" />
-
-                <View
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="8dp"
-                    android:background="@android:color/holo_blue_light" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" Em Andamento"
-                    android:textColor="@android:color/white"
-                    android:layout_marginStart="4dp" />
-            </LinearLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tipo Manutenção: Troca de Fios"
-                android:textColor="@android:color/white" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Data e Hora: 01/01/2024 10:00"
-                android:textColor="@android:color/white" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Descrição: Fios soltos no meio da rua."
-                android:textColor="@android:color/white" />
-        </LinearLayout>
     </LinearLayout>
 
-    <!-- Botão para Adicionar Chamado -->
-    <Button
-        android:id="@+id/btn_adicionar_denuncia"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="Adicionar Denúncia"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="70dp"
-        android:background="@color/yellow"
-        android:textColor="@android:color/white" />
+
+
 
     <!-- Barra Inferior com ícones -->
     <LinearLayout
@@ -240,21 +146,27 @@
         android:background="@color/yellow"
         android:layout_alignParentBottom="true">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/icon_home"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:src="@drawable/home"
-            android:layout_gravity="center"/>
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Ícone Home"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home"/>
 
-        <ImageView
+        <ImageButton
             android:id="@+id/icon_denuncia"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:src="@drawable/report"
-            android:layout_gravity="center" />
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Ícone Denúncia"
+            android:scaleType="fitCenter"
+            android:src="@drawable/report" />
     </LinearLayout>
-
 </RelativeLayout>
+

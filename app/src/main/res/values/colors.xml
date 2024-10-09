@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="cinza">#545151</color> #FBBC05
     <color name="yellow">#FBBC05</color>
+    <color name="yellow_background">#d49e04</color>
+
 </resources>

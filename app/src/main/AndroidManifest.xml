@@ -3,6 +3,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -12,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
         <activity
-            android:name=".Activity.SendReport"
+            android:name=".Activity.SendReportActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.ReportActivity"
@@ -22,17 +25,18 @@
             android:exported="false" />
 
         <meta-data
-            android:name="com.google.android.gms.auth.api.credentials.CREDENTIALS_CLIENT_ID"
-            android:value="@string/default_web_client_id" /> <!-- Tela de Login -->
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCtvNzycNzwREiL1kjM5KwQFHuAQh-xUwg" />
+
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Tela de Cadastro -->
+        </activity>
         <activity
             android:name=".Activity.RegisterActivity"
             android:exported="true" />

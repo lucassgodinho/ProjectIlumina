@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/yellow"
+    android:padding="25dp"
+    android:layout_marginTop="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start">
+
+        <TextView
+            android:id="@+id/tvCidade"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="Cidade: Osorio"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/holo_green_light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Finalizado"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvBairro"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Bairro: Centro"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tvTipoManutencao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo Manutenção: Troca de Fios"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tvDataHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data e Hora: 01/01/2024 10:00"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tvDescricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descrição: Fios soltos no meio da rua."
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tvLocalizacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Localização: Latitude, Longitude"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/tvImagem"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"/>
+</LinearLayout>

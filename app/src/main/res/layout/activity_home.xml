@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/main"
+<LinearLayout android:id="@+id/main"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Barra Superior -->
     <LinearLayout
@@ -28,7 +28,7 @@
             android:layout_weight="1"
             android:textColor="@color/white"
             android:text="Mapa"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="bold"
             android:gravity="center" />
 
@@ -39,45 +39,42 @@
             android:src="@drawable/notificacao"
             android:contentDescription="Ícone Notificação" />
     </LinearLayout>
-
-    <!-- Contêiner para o Mapa -->
-    <FrameLayout
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:scaleType="centerCrop" />
 
-        <ImageView
-            android:id="@+id/map"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="Mapa"
-            android:src="@drawable/map1"
-            android:scaleType="centerCrop" />
-    </FrameLayout>
-
-    <!-- Barra Inferior com ícones -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/yellow"
         android:orientation="horizontal"
-        android:padding="8dp"
-        android:background="@color/yellow">
+        android:padding="8dp">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/icon_home"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:src="@drawable/home"
-            android:layout_gravity="center"/>
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Ícone Home"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/icon_denuncia"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:src="@drawable/report"
-            android:layout_gravity="center" />
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Ícone Denúncia"
+            android:scaleType="fitCenter"
+            android:src="@drawable/report" />
     </LinearLayout>
 
 </LinearLayout>

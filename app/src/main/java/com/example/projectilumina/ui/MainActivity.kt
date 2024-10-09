@@ -1,7 +1,6 @@
-package com.example.projectilumina
+package com.example.projectilumina.ui
 
 import android.content.Intent
-import android.content.IntentSender
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -9,14 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.projectilumina.Activity.HomeActivity
 
 import com.example.projectilumina.Activity.RegisterActivity
-import com.example.projectilumina.R.string.default_web_client_id
 import com.example.projectilumina.databinding.ActivityMainBinding
-import com.google.android.gms.auth.api.identity.BeginSignInRequest
-import com.google.android.gms.auth.api.identity.Identity
-import com.google.android.gms.auth.api.identity.SignInClient
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.auth
 
 class MainActivity : AppCompatActivity() {
@@ -25,8 +19,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private var binding: ActivityMainBinding? = null
 
-    private lateinit var oneTapClient: SignInClient
-    private lateinit var signInRequest: BeginSignInRequest
+//    private lateinit var oneTapClient: SignInClient
+//    private lateinit var signInRequest: BeginSignInRequest
 
 //    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
 //        super.onActivityResult(requestCode, resultCode, data)
