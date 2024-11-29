@@ -2,13 +2,17 @@ package com.example.projectilumina.Activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projectilumina.Adapter.DenunciaAdapter
 import com.example.projectilumina.R
+import com.example.projectilumina.Utils.NotificationUtils
 import com.example.projectilumina.data.Denuncia
-import com.example.projectilumina.databinding.ActivityHomeBinding
 import com.example.projectilumina.databinding.ActivityReportBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -22,6 +26,7 @@ class ReportActivity : AppCompatActivity() {
     private lateinit var denunciaList: ArrayList<Denuncia>
     private lateinit var database: DatabaseReference
     private lateinit var binding: ActivityReportBinding
+    private lateinit var notificationIcon: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,12 +38,9 @@ class ReportActivity : AppCompatActivity() {
             val intent = Intent(this, SendReportActivity::class.java)
             startActivity(intent)
         }
-        binding.iconHome.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
-        }
 
-        // Inicializa o RecyclerView e a lista de denúncias
+
+
         recyclerView = findViewById(R.id.recyclerViewDenuncias)
         recyclerView.layoutManager = LinearLayoutManager(this)
         denunciaList = ArrayList()
@@ -46,28 +48,68 @@ class ReportActivity : AppCompatActivity() {
 
         recyclerView.adapter = denunciaAdapter
 
-        // Inicializa o Firebase Database
+
         database = FirebaseDatabase.getInstance().getReference("denuncias")
+        notificationIcon = findViewById(R.id.icon_notificacao)
 
-        // Carrega as denúncias
+        NotificationUtils.atualizarIconeNotificacao(notificationIcon)
+
+        setupNavigationButtons()
         carregarDenuncias()
-
+        updateIconColors(isMapaActivity = true)
+        NotificationUtils.atualizarIconeNotificacao(binding.appBarDefault.iconNotificacao)
     }
 
-    private fun carregarDenuncias() {
-        database.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                denunciaList.clear() // Limpa a lista antes de adicionar novos itens
-                for (denunciaSnapshot in snapshot.children) {
-                    val denuncia = denunciaSnapshot.getValue(Denuncia::class.java)
-                    denuncia?.let { denunciaList.add(it) } // Adiciona denúncia à lista
-                }
-                denunciaAdapter.notifyDataSetChanged() // Atualiza o adaptador
-            }
+    override fun onStart() {
+        super.onStart()
+        NotificationUtils.atualizarIconeNotificacao(binding.appBarDefault.iconNotificacao)
+    }
+    private fun setupNavigationButtons() {
+        binding.appBarDefault.textActivity.text = "Acompanhamento de Chamado"
+        binding.appBarDefault.iconNotificacao.setOnClickListener {
+            val intent = Intent(this, NotificacaoActivity::class.java)
+            startActivity(intent)
+        }
 
-            override fun onCancelled(error: DatabaseError) {
-                // Lida com erros
-            }
-        })
+        binding.appBarDefault.iconReturn.setOnClickListener {
+            finish()
+        }
+        binding.endBar.iconHome.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+    }
+    private fun updateIconColors(isMapaActivity: Boolean) {
+        if (isMapaActivity) {
+
+            binding.endBar.iconHome.setColorFilter(ContextCompat.getColor(this, R.color.black))
+            binding.endBar.iconDenuncia.setColorFilter(ContextCompat.getColor(this, R.color.white))
+        } else {
+
+            binding.endBar.iconHome.setColorFilter(ContextCompat.getColor(this, R.color.black))
+            binding.endBar.iconDenuncia.setColorFilter(ContextCompat.getColor(this, R.color.black))
+        }
+    }
+    private fun carregarDenuncias() {
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        val userId = currentUser?.uid
+
+        database.orderByChild("userId").equalTo(userId)
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    denunciaList.clear()
+                    for (denunciaSnapshot in snapshot.children) {
+                        val denuncia = denunciaSnapshot.getValue(Denuncia::class.java)
+                        denuncia?.let { denunciaList.add(it) }
+                    }
+                    denunciaAdapter.notifyDataSetChanged()
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+
+                }
+            })
     }
 }
+
+

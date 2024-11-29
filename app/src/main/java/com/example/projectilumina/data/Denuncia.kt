@@ -1,6 +1,6 @@
 package com.example.projectilumina.data
 data class Denuncia(
-    var id: String? = null,
+    var id: String = "",
     var cidade: String = "",
     var bairro: String = "",
     var tipoManutencao: String = "",
@@ -8,10 +8,14 @@ data class Denuncia(
     var descricao: String = "",
     var latitude: Double = 0.0,
     var longitude: Double = 0.0,
-    var imagemUrl: String? = null // Adicionando um parâmetro para a URL da imagem
+    var imagemUrl: String? = null,
+    val userId: String = "",
+    var statusColor: String = "",
+    var status: String = "Em Andamento",
+    var deletada: Boolean = false
 )
 {
     override fun toString(): String {
-        return "Denuncia(id=$id, cidade='$cidade', bairro='$bairro', tipoManutencao='$tipoManutencao', dataHora='$dataHora', descricao='$descricao', latitude=$latitude, longitude=$longitude)"
+        return "Denuncia(id=$id, cidade='$cidade', bairro='$bairro', tipoManutencao='$tipoManutencao', dataHora='$dataHora', descricao='$descricao', latitude=$latitude, longitude=$longitude, imagemUrl=$imagemUrl, userId=$userId, status=$status, deletada=$deletada)"
     }
 }

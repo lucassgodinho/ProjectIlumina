@@ -1,14 +1,15 @@
-package com.example.projectilumina.Activity
+package com.example.projectilumina.Adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.projectilumina.R
 import com.example.projectilumina.data.Denuncia
-import com.example.projectilumina.databinding.ItemDenunciaBinding
 
 class DenunciaAdapter(private val denunciaList: List<Denuncia>) :
     RecyclerView.Adapter<DenunciaAdapter.DenunciaViewHolder>() {
@@ -21,6 +22,10 @@ class DenunciaAdapter(private val denunciaList: List<Denuncia>) :
         private val tvDescricao = itemView.findViewById<TextView>(R.id.tvDescricao)
         private val tvLocalizacao = itemView.findViewById<TextView>(R.id.tvLocalizacao)
         private val tvImagem = itemView.findViewById<ImageView>(R.id.tvImagem)
+        private var tvStatusColor = itemView.findViewById<View>(R.id.tvStatusColor)
+        private var tvStatus = itemView.findViewById<TextView>(R.id.tvStatus)
+
+
 
         fun bind(denuncia: Denuncia) {
             tvCidade.text = "Cidade: ${denuncia.cidade}"
@@ -29,11 +34,23 @@ class DenunciaAdapter(private val denunciaList: List<Denuncia>) :
             tvDataHora.text = "Data e Hora: ${denuncia.dataHora}"
             tvDescricao.text = "Descrição: ${denuncia.descricao}"
             tvLocalizacao.text = "Localização: ${denuncia.latitude}, ${denuncia.longitude}"
+            tvStatus.text = "${denuncia.status}"
+            val statusColor = when (denuncia.status) {
+                "Em Andamento" -> ContextCompat.getColor(tvStatus.context, R.color.blue)
+                "Finalizado" -> ContextCompat.getColor(tvStatus.context, R.color.greenStatus)
+                else -> ContextCompat.getColor(tvStatus.context, R.color.red)
+            }
+            tvStatusColor.setBackgroundColor(statusColor)
 
-            // Carregar a imagem se existir
+
             if (denuncia.imagemUrl != null) {
-                // Use uma biblioteca como Glide ou Picasso para carregar a imagem
-                // Glide.with(itemView.context).load(denuncia.imagemUrl).into(tvImagem)
+                Glide.with(itemView.context)
+                    .load(denuncia.imagemUrl)
+                    .placeholder(R.drawable.carregando_img)
+                    .error(R.drawable.carregando_img)
+                    .into(tvImagem)
+            } else {
+                tvImagem.setImageResource(R.drawable.iluminalogo2)
             }
         }
     }
