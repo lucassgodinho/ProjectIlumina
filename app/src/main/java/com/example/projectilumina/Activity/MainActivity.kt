@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.projectilumina.R
 
 import com.example.projectilumina.data.User
 import com.example.projectilumina.databinding.ActivityMainBinding
@@ -49,6 +50,25 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, RegisterActivity::class.java)
             startActivity(intent)
         }
+
+        binding?.passwordToggle?.setOnClickListener {
+            val isPasswordVisible = binding?.editTextPassword?.transformationMethod == null
+
+            if (isPasswordVisible) {
+
+                binding?.editTextPassword?.transformationMethod = android.text.method.PasswordTransformationMethod.getInstance()
+                binding?.passwordToggle?.setImageResource(R.drawable.ic_visibility_off)
+            } else {
+
+                binding?.editTextPassword?.transformationMethod = null
+                binding?.passwordToggle?.setImageResource(R.drawable.ic_visibility)
+            }
+
+
+            binding?.editTextPassword?.setSelection(binding?.editTextPassword?.text!!.length)
+        }
+
+
     }
 
     private fun signInWithEmailAndPassword(email: String, password: String) {

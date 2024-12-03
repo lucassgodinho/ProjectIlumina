@@ -11,6 +11,7 @@ import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.messaging.FirebaseMessaging
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -49,7 +50,15 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun createUserWithEmailAndPassword(email: String, password: String, nome: String, cpf: String, telefone: String, rua: String, bairro: String) {
+    private fun createUserWithEmailAndPassword(
+        email: String,
+        password: String,
+        nome: String,
+        cpf: String,
+        telefone: String,
+        rua: String,
+        bairro: String
+    ) {
         if (email.isEmpty() || password.isEmpty() || nome.isEmpty() || cpf.isEmpty() || telefone.isEmpty() || rua.isEmpty() || bairro.isEmpty()) {
             Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
             return
@@ -67,11 +76,29 @@ class RegisterActivity : AppCompatActivity() {
                     val longitude = 0.0
                     val userObj = User(userId, nome, email, cpf, telefone, rua, bairro, latitude, longitude)
 
+                    // Salvar dados do usuário no Firebase Realtime Database
                     database.child(userId).setValue(userObj).addOnCompleteListener { saveTask ->
                         if (saveTask.isSuccessful) {
-                            val intent = Intent(this@RegisterActivity, MainActivity::class.java)
-                            startActivity(intent)
-                            finish()
+                            // Obter o token FCM do usuário
+                            FirebaseMessaging.getInstance().token.addOnCompleteListener { tokenTask ->
+                                if (tokenTask.isSuccessful) {
+                                    val token = tokenTask.result
+                                    database.child(userId).child("token").setValue(token).addOnCompleteListener { tokenSaveTask ->
+                                        if (tokenSaveTask.isSuccessful) {
+                                            Log.d(TAG, "Token FCM salvo com sucesso")
+                                            val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+                                            startActivity(intent)
+                                            finish()
+                                        } else {
+                                            Toast.makeText(this@RegisterActivity, "Erro ao salvar token FCM", Toast.LENGTH_SHORT).show()
+                                            Log.e(TAG, "Erro ao salvar token: ${tokenSaveTask.exception?.message}")
+                                        }
+                                    }
+                                } else {
+                                    Toast.makeText(this@RegisterActivity, "Erro ao obter token FCM", Toast.LENGTH_SHORT).show()
+                                    Log.e(TAG, "Erro ao obter token FCM: ${tokenTask.exception?.message}")
+                                }
+                            }
                         } else {
                             Toast.makeText(this@RegisterActivity, "Falha ao salvar dados: ${saveTask.exception?.message}", Toast.LENGTH_SHORT).show()
                         }
@@ -85,6 +112,7 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
+
     companion object {
         private const val TAG = "EmailAndPassword"
     }
@@ -94,3 +122,4 @@ class RegisterActivity : AppCompatActivity() {
         binding = null
     }
 }
+

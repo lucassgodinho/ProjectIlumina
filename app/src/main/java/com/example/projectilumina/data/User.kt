@@ -12,18 +12,7 @@ data class User(
     val longitude: Double ,
     val token: String? = null
 ){
-    constructor() : this(
-        id = null,
-        nome = null,
-        email = null,
-        cpf = null,
-        telefone = null,
-        rua = null,
-        bairro = null,
-        latitude = 0.0,
-        longitude = 0.0,
-        token = null
-    )
+    constructor() : this(null, null, null, null, null, null, null, 0.0, 0.0)
     override fun toString(): String {
         return "Users(id=$id, nome='$nome', email='$email', cpf='$cpf', telefone='$telefone', rua='$rua',bairro=$bairro, latitude=$latitude, longitude=$longitude, token=$token)"
     }

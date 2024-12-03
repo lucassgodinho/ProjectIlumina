@@ -16,9 +16,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.android.volley.Response
-import com.android.volley.toolbox.StringRequest
-import com.android.volley.toolbox.Volley
+
 import com.example.projectilumina.R
 import com.example.projectilumina.Utils.NotificationUtils
 import com.example.projectilumina.data.Denuncia
@@ -105,7 +103,10 @@ class SendReportActivity : AppCompatActivity() {
             selecionarImagem()
         }
         binding.btnConcluir.setOnClickListener {
-            enviarDenuncia()
+            if (binding.btnConcluir.isEnabled) {
+                binding.btnConcluir.isEnabled = false
+                enviarDenuncia()
+            }
         }
     }
 
@@ -145,37 +146,65 @@ class SendReportActivity : AppCompatActivity() {
     }
 
     private fun enviarDenuncia() {
-
         val tipoManutencao = binding.edtTipoManutencao.text.toString().trim()
         val currentDate =
             SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault()).format(Date())
         val descricao = binding.edtDescricao.text.toString().trim()
         val bairro = binding.edtBairro.text.toString().trim()
+        val cidade = binding.edtCidade.text.toString().trim()
 
         if (tipoManutencao.isEmpty() || descricao.isEmpty()) {
             Toast.makeText(this, "Por favor, preencha todos os campos.", Toast.LENGTH_SHORT).show()
+            binding.btnConcluir.isEnabled = true
             return
         }
 
         val latitude = userLocation?.latitude ?: 0.0
         val longitude = userLocation?.longitude ?: 0.0
 
-        val denuncia = Denuncia(
-            id = "",
-            cidade = "Cidade exemplo",
-            bairro = bairro,
-            tipoManutencao = tipoManutencao,
-            dataHora = currentDate,
-            descricao = descricao,
-            latitude = latitude,
-            longitude = longitude,
-            imagemUrl = null,
-            userId = auth.currentUser?.uid ?: return
-        )
+        val userId = auth.currentUser?.uid ?: return
+
+        if (imageUri == null) {
+            Toast.makeText(this, "Selecione uma imagem para a denúncia.", Toast.LENGTH_SHORT).show()
+            binding.btnConcluir.isEnabled = true
+            return
+        }
+        val storageRef = FirebaseStorage.getInstance().reference
+            .child("imagens_denuncias/${System.currentTimeMillis()}.jpg")
+
+        val uploadTask = storageRef.putFile(imageUri!!)
+        uploadTask.continueWithTask { task ->
+            if (!task.isSuccessful) {
+                throw task.exception ?: Exception("Erro desconhecido ao enviar a imagem")
+            }
+            storageRef.downloadUrl
+        }.addOnCompleteListener { task ->
+            binding.btnConcluir.isEnabled = false
+            if (task.isSuccessful) {
+                val imageUrl = task.result.toString()
 
 
-        salvarDenuncia(denuncia)
+                val denuncia = Denuncia(
+                    id = "",
+                    cidade = cidade,
+                    bairro = bairro,
+                    tipoManutencao = tipoManutencao,
+                    dataHora = currentDate,
+                    descricao = descricao,
+                    latitude = latitude,
+                    longitude = longitude,
+                    imagemUrl = imageUrl,
+                    userId = userId
+                )
+
+                salvarDenuncia(denuncia)
+            } else {
+                Log.e("FirebaseStorage", "Erro ao obter URL da imagem: ${task.exception?.message}")
+                Toast.makeText(this, "Erro ao enviar a imagem. Tente novamente.", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
+
 
     private fun salvarDenuncia(denuncia: Denuncia) {
         val reportsRef = FirebaseDatabase.getInstance().getReference("denuncias")
@@ -202,7 +231,9 @@ class SendReportActivity : AppCompatActivity() {
                 Toast.makeText(this, "Denúncia enviada/atualizada com sucesso!", Toast.LENGTH_SHORT)
                     .show()
                 finish()
+                binding.btnConcluir.isEnabled = false
             } else {
+                binding.btnConcluir.isEnabled = true
                 Log.e(
                     "FirebaseError",
                     "Erro ao salvar/atualizar denúncia: ${task.exception?.message}"

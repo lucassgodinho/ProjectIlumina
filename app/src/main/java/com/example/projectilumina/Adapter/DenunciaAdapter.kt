@@ -20,7 +20,6 @@ class DenunciaAdapter(private val denunciaList: List<Denuncia>) :
         private val tvTipoManutencao = itemView.findViewById<TextView>(R.id.tvTipoManutencao)
         private val tvDataHora = itemView.findViewById<TextView>(R.id.tvDataHora)
         private val tvDescricao = itemView.findViewById<TextView>(R.id.tvDescricao)
-        private val tvLocalizacao = itemView.findViewById<TextView>(R.id.tvLocalizacao)
         private val tvImagem = itemView.findViewById<ImageView>(R.id.tvImagem)
         private var tvStatusColor = itemView.findViewById<View>(R.id.tvStatusColor)
         private var tvStatus = itemView.findViewById<TextView>(R.id.tvStatus)
@@ -33,7 +32,6 @@ class DenunciaAdapter(private val denunciaList: List<Denuncia>) :
             tvTipoManutencao.text = "Tipo Manutenção: ${denuncia.tipoManutencao}"
             tvDataHora.text = "Data e Hora: ${denuncia.dataHora}"
             tvDescricao.text = "Descrição: ${denuncia.descricao}"
-            tvLocalizacao.text = "Localização: ${denuncia.latitude}, ${denuncia.longitude}"
             tvStatus.text = "${denuncia.status}"
             val statusColor = when (denuncia.status) {
                 "Em Andamento" -> ContextCompat.getColor(tvStatus.context, R.color.blue)

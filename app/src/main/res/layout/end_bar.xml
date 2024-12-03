@@ -2,7 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/recylcer_button_navigation"
+    android:background="@drawable/rounded_rectangle_yellow"
     android:orientation="horizontal"
     android:elevation="4dp"
     android:padding="8dp">
