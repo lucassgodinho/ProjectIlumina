@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-mergeDebugResources-97:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-mergeDebugResources-97:\\layout\\item_denuncia.xml",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\item_denuncia.xml"
+    },
+    {
+        "merged": "com.example.projectilumina.app-mergeDebugResources-97:/layout/activity_main.xml",
+        "source": "com.example.projectilumina.app-main-100:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-mergeDebugResources-97:\\layout\\activity_notificacao.xml",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\activity_notificacao.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-mergeDebugResources-97:\\layout\\end_bar.xml",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\end_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-mergeDebugResources-97:\\layout\\activity_profile.xml",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-mergeDebugResources-97:\\layout\\item_notificacao.xml",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\item_notificacao.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-mergeDebugResources-97:\\layout\\activity_send_report.xml",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\activity_send_report.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-mergeDebugResources-97:\\layout\\item_profile.xml",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\item_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-mergeDebugResources-97:\\layout\\activity_register.xml",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-mergeDebugResources-97:\\layout\\activity_report.xml",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\activity_report.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-mergeDebugResources-97:\\layout\\app_bar_home.xml",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\app_bar_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-mergeDebugResources-97:\\layout\\activity_home.xml",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-mergeDebugResources-97:\\layout\\item_denuncia_mapa.xml",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\item_denuncia_mapa.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-mergeDebugResources-97:\\layout\\app_bar_default.xml",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\app_bar_default.xml"
+    }
+]

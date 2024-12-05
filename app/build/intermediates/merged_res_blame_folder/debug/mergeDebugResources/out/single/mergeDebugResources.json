@@ -1,0 +1,222 @@
+[
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\layout_activity_notificacao.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\activity_notificacao.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\layout_app_bar_home.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\app_bar_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_report.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\report.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\layout_item_denuncia_mapa.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\item_denuncia_mapa.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\layout_end_bar.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\end_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\layout_activity_report.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\activity_report.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_menu.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\menu.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_rounded_rectangle_red.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\rounded_rectangle_red.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_iluminalogo2.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\iluminalogo2.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\raw_service_account.json.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\raw\\service_account.json"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_publicidade.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\publicidade.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_gogle.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\gogle.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_icon_notificacao_ativa.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\icon_notificacao_ativa.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_iluminalogo.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\iluminalogo.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_recycler_background.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\recycler_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_rounded_rectangle_green.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\rounded_rectangle_green.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_recylcer_button_navigation.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\recylcer_button_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_icon_logo.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\icon_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\layout_item_denuncia.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\item_denuncia.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\layout_activity_send_report.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\activity_send_report.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_circle_background.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\circle_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_icon_notificacao.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\icon_notificacao.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.projectilumina.app-debug-98:/layout_activity_main.xml.flat",
+        "source": "com.example.projectilumina.app-main-100:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_rounded_rectangle_yellow.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\rounded_rectangle_yellow.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\layout_item_notificacao.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\item_notificacao.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_foto_user.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\foto_user.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\layout_item_profile.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\item_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_home.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\home.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_ic_visibility_off.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\ic_visibility_off.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_icon_mapa.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\icon_mapa.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_ic_visibility.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\ic_visibility.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_icon_return.png.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\icon_return.png"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\drawable_carregando_img.jpg.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\drawable\\carregando_img.jpg"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\layout_app_bar_default.xml.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\layout\\app_bar_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-debug-98:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\bearg\\.gradle\\daemon\\8.7\\com.example.projectilumina.app-main-100:\\mipmap-hdpi\\ic_launcher_round.webp"
+    }
+]
